@@ -1,9 +1,9 @@
 function Footer() {
-  const footerBottomStyle = {
+  const footerStyle = {
     textAlign: "center",
     paddingBottom: "5rem",
   };
-  const buttonStyle = {
+  const orderBtnStyle = {
     textAlign: "center",
     padding: "1rem",
     fontSize: "17px",
@@ -11,11 +11,12 @@ function Footer() {
     borderRadius: "5px",
     backgroundColor: "#ffd43b",
     border: "none",
+    cursor: "pointer",
   };
   return (
-    <div style={footerBottomStyle}>
+    <div style={footerStyle}>
       <p>we&apos;r open untill 20:00. Come Visit and order online.</p>
-      <button style={buttonStyle}>Order Now</button>
+      <button style={orderBtnStyle}>Order Now</button>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Pizza from "./pizza";
+import data from "../data/data.js";
 const menuBoxStyle = {
   display: "grid",
   gridTemplateColumns: "repeat(2, 1fr)",
@@ -34,12 +35,9 @@ function Menu() {
         </p>
       </div>
       <div style={menuBoxStyle}>
-        <Pizza />
-        <Pizza />
-        <Pizza />
-        <Pizza />
-        <Pizza />
-        <Pizza />
+        {data.map(function (pizzaData) {
+          return <Pizza pizzaData={pizzaData} key={pizzaData.name} />;
+        })}
       </div>
     </div>
   );
